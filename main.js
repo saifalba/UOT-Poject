@@ -9,8 +9,6 @@ const server=http.createServer((req,res)=>{
     let path="./"
     switch (req.url){
         case "/":path+="index.html";res.statusCode=200;break;
-        case "/login":path+="login.html";res.statusCode=200;break;
-        case "/admin":path+="admin.php";res.statusCode=200;break;
         default:path+="404.html";res.statusCode=404;break;
 
     }
