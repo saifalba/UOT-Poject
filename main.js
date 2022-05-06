@@ -1,29 +1,21 @@
-const http=require("http");
-const fs=require("fs");
+const express=require('express');
+const path=require('path');
 const HOSTNAME= process.env.HOSTNAME || "localhost";
 const PORT= process.env.PORT || 3000;
+const app=express();
 
-const server=http.createServer((req,res)=>{
-    console.log(req.url,req.method);
-    res.setHeader("Content-Type","text/html");
-    let path="./"
-    switch (req.url){
-        case "/":path+="index.html";res.statusCode=200;break;
-        default:path+="404.html";res.statusCode=404;break;
+app.get('/',(req,res)=>{
+    res.statusCode=200;
+    res.sendFile(path.join(__dirname+'/index.html'));
+})
 
-    }
-    
-    fs.readFile(path,(err,data)=>{
-        if(err){
-            console.error(err);
-            res.end();
-        }else{
-            res.end(data);
-        }
-    });
 
-});
+app.all('*',(req,res)=>{
+    res.statusCode=404;
+    res.sendFile(path.join(__dirname+'/404.html'));
+})
 
-server.listen(PORT,HOSTNAME,()=>{
-    console.log(`server running at http://${HOSTNAME}:${PORT}`);
-});
+
+
+
+app.listen(PORT);
