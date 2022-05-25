@@ -2,9 +2,37 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>Home</title>
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
-        <h1>hello</h1>
-        <a href="login">login</a>
+        <div class="main">
+            <h1 class="LogoN">Welcome</h1>
+            
+        </div>
+        <div class="selection">
+            <a href="/404.html" target="_blank">
+                <span class="test2" id="set">Setting</span>
+            </a>
+            <a href="/404.html" target="_blank">
+                <span class="test2">Post</span>
+            </a>
+            <a href="/404.html" target="_blank">
+                <span class="test2">About Us</span>
+            </a>
+        </div>
+        <div id="first">
+            
+        </div>
+        <script src="vue.js"></script>
+        <script>
+            var vm = new Vue({
+               el: '#first',
+               data : {
+
+               } 
+               
+            })
+        </script>
     </body>
 </html>
