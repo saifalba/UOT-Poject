@@ -7,8 +7,14 @@ const app=express();
 app.get('/',(req,res)=>{
     res.statusCode=200;
     res.sendFile(path.join(__dirname+'/index.html'));
+    
+
 })
 
+app.get('/about',(req,res)=>{
+   res.statusCode=200;
+   res.sendFile(path.join(__dirname+'/about.html')); 
+});
 
 app.all('*',(req,res)=>{
     res.statusCode=404;
