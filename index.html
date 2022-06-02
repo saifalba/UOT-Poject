@@ -7,26 +7,43 @@
     </head>
     <body>
         <div class="main">
-            <span class="logom"><img src="./imgs/logo.jpg" alt=""></span>
+            <span class="logom"><img src="./imgs/logo.jpg" alt="A1 Logo"></span>
             <h1 class="LogoN">Welcome Home</h1>
+            <img onclick="darkMode()" src="./imgs/moon.png" alt="" id="icon">
         </div>
         <div class="selection">
-            <a href="/index.html">
+            
+            <a href="/index">
                 <button class="test2" id="btn1">Home</button>
             </a>
-            <a href="/post.html">
+            <a href="/post">
                 <button class="test2" id="btn2">Post</button>
             </a>
             <a href="/about">
                 <button class="test2" id="btn3">About Us</button>
             </a>
+            
         </div>
         <div id="first">
-            <label>
-                <input type="checkbox">
-                <span class="check"></span>
-            </label>
+            
         </div>
+        <script>
+            function darkMode() {
+        var element = document.body;
+        element.className = "dark-mode";
+      }
+        var icon = document.getElementById("icon");
+        icon.onclick = function(){
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                icon.src = "./imgs/sun.png";
+            }
+            else {
+                icon.src = "./imgs/moon.png";
+            }
+        }
+        
+        </script>
         <script src="vue.js"></script>
         <script>
             var vm = new Vue({

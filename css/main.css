@@ -21,15 +21,26 @@
     background-color:#329688;
     padding: 10px 2px;
   }
+  .dark-mode {
+    background-color: #092c3e;
+    transition: ease 0.1s all ;
+  }
+#icon {
+    height: 30px;
+    cursor: pointer;
+    margin-left: 1500px;
+    margin-top: 20px;
+    
+}
 #btn1 {
-    margin-left: 320px;
+    margin-left: 340px;
     display: inline-block;
 }
 #btn2 {
-    margin-left: 180px;
+    margin-left: 340px;
 }
 #btn3 {
-    margin-left: 180px;
+    margin-left: 340px;
 }
 .test2::before{
     background: #329688;
@@ -61,13 +72,13 @@ body {
 .main {
     margin: 0px;
     padding: 8px;
-    background-color: #85dcb8;
+    background-color: #77cfaa;
     display: flex;
 }
 .selection {
     margin: 0px;
     padding: 12px;
-    background-color: #85dcb8;
+    background-color: #77cfaa;
     border-top: 1px solid black;
     overflow: auto;
 }
@@ -95,7 +106,7 @@ body {
     max-width: 50px;
     box-shadow: 0px 0px 0px 2px #1b4764;
     border-radius: 25px;
-    margin-left: 10px ;
+    margin-left: 30px ;
     margin-top: 10px;
 }
 input[type="checkbox"] {
@@ -115,7 +126,6 @@ input[type="checkbox"] {
 input[type="checkbox"]:checked ~ .check
 {   
     background: #fff;
-    box-shadow: 0 0 0 5000px #092c3e;
 }
 .check::before {
     content: '';
@@ -145,4 +155,177 @@ input[type="checkbox"]:checked ~ .check:after {
 }
 input[type="checkbox"]:checked ~ .check:after {
     transform: translateX(0px);
+}
+
+@media screen and (max-width:1920px) {
+    #first {
+        padding: 700px;
+    }    
+}
+@media screen and (max-width:1600px) {
+    #first {
+        
+        padding: 600px;
+        padding-bottom:1000px;
+    }    
+    #btn1 {
+        margin-left: 280px;
+    }
+    #btn2 {
+        margin-left: 280px;
+    }
+    #btn3 {
+        margin-left: 280px;
+    } 
+    #icon {
+        margin-left: 1130px;
+    }
+}
+@media screen and (max-width:1200px) {
+    #first {
+        
+        padding: 500px;
+        padding-bottom:1000px;
+    }   
+    #btn1 {
+        margin-left: 200px;
+        font-size: 16px;
+    }
+    #btn2 {
+        margin-left: 180px;
+        font-size: 16px;
+    }
+    #btn3 {
+        margin-left: 180px;
+        font-size: 16px;
+        height: 30px;
+        width: 120px;
+    } 
+    #icon {
+        margin-left: 670px;
+    }
+}
+@media screen and (max-width:900px) {
+    #first {
+        
+        padding: 300px;
+        padding-bottom:1000px;
+    }   
+    .selection{
+        padding: 20px;
+    }
+    #btn1 {
+        margin-left: 100px;
+        font-size: 14px;
+        padding: 5px;
+    }
+    #btn2 {
+        margin-left: 150px;
+        font-size: 14px;
+        padding: 5px;
+    }
+    #btn3 {
+        margin-left: 150px;
+        font-size: 14px;
+        height: 30px;
+        width: 100px;
+    } 
+    #icon {
+        margin-left: 450px;
+    }
+}
+@media screen and (max-width:700px) {
+    #first {
+        
+        padding: 300px;
+        padding-bottom:1000px;
+    }   
+    .selection{
+        padding: 30px
+    }
+    #btn1 {
+        margin-left: 60px;
+        font-size: 15px;
+        height: 50px;
+        width: 70px;
+    }
+    #btn2 {
+        margin-left: 140px;
+        font-size: 15px;
+        height: 50px;
+        width: 70px;
+    }
+    #btn3 {
+        margin-left: 140px;
+        font-size: 15px;
+        height: 50px;
+        width: 90px;
+        text-align: center;
+    } 
+    #icon {
+        margin-left: 300px;
+    }
+}@media screen and (max-width:650px) {
+    #first {
+        
+        padding: 200px;
+        padding-bottom:1000px;
+    }   
+    .selection{
+        padding: 30px
+    }
+    #btn1 {
+        margin-left: 50px;
+        font-size: 15px;
+        height: 50px;
+        width: 70px;
+    }
+    #btn2 {
+        margin-left: 50px;
+        font-size: 15px;
+        height: 50px;
+        width: 70px;
+    }
+    #btn3 {
+        margin-left: 50px;
+        font-size: 15px;
+        height: 50px;
+        width: 90px;
+        text-align: center;
+    } 
+    #icon {
+        margin-left: 100px;
+    }
+}
+@media screen and (max-width:480px) {
+    #first {
+        
+        padding: 20px;
+        padding-bottom:1000px;
+    }   
+    .selection{
+        padding: 30px
+    }
+    #btn1 {
+        margin-left: 30px;
+        font-size: 10px;
+        height: 30px;
+        width: 50px;
+    }
+    #btn2 {
+        margin-left: 30px;
+        font-size: 10px;
+        height: 30px;
+        width: 50px;
+    }
+    #btn3 {
+        margin-left: 30px;
+        font-size: 10px;
+        height: 30px;
+        width: 60px;
+        text-align: center;
+    } 
+    #icon {
+        margin-left: 60px;
+    }
 }
