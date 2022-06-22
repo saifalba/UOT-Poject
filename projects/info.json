@@ -1,5 +1,6 @@
 {
-    "number":1,"project1":[
-        "projectname","projectlogo","projecturl"
+    "number":1,
+    "project1":[
+        "patient_manager","/logo/","/projects/patient_manager"
     ]
 }
