@@ -7,42 +7,40 @@
     </head>
     <body>
         <div class="main">
-            <span class="logom"><img src="./imgs/logo.jpg" alt="A1 Logo"></span>
-            <h1 class="LogoN">Welcome Home</h1>
-            <img onclick="darkMode()" src="./imgs/moon.png" alt="" id="icon">
-        </div>
-        <div class="selection">
-            
-            <a href="/index">
-                <button class="test2" id="btn1">Home</button>
-            </a>
-            <a href="/post">
-                <button class="test2" id="btn2">Post</button>
-            </a>
-            <a href="/about">
-                <button class="test2" id="btn3">About Us</button>
-            </a>
-            
+            <nav class ="containernav">
+                <div class="logom"><img src="./imgs/logo.jpg" alt="A1 Logo"><h3>Welcome home</h3></div>
+                <a href="#" class="toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="navbar">
+                    <ul>
+                <li>
+                    <a href="/index.html">HOME</a>
+                </li>
+
+                <li>
+                    <a href="/post.html">PROJECTS</a>
+                </li>
+
+                <li>
+                    <a href="/about.html">ABOUT US</a>
+                </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
         <div id="first">
-            
+
         </div>
         <script>
-            function darkMode() {
-        var element = document.body;
-        element.className = "dark-mode";
-      }
-        var icon = document.getElementById("icon");
-        icon.onclick = function(){
-            document.body.classList.toggle("dark-mode");
-            if(document.body.classList.contains("dark-mode")){
-                icon.src = "./imgs/sun.png";
-            }
-            else {
-                icon.src = "./imgs/moon.png";
-            }
-        }
-        
+        const toggleButton = document.getElementsByClassName('toggle')[0]
+        const navbarLinks = document.getElementsByClassName('navbar')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
         </script>
         <script src="vue.js"></script>
         <script>

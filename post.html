@@ -9,16 +9,39 @@
 </head>
 <body>
     <div class="main">
-        <span class="logom"><img src="./imgs/logo.jpg" alt=""></span>
-        <h1 class="LogoN">Anything in you mind ?</h1>
-
-    </div>
-    <div class="selection">
-        <a href="/index.html">
-            <span id="back">
-            <img src="./imgs/left.png" alt="" height="30" width="30">
-            </span>
-        </a>
-    </div>
+        <nav class ="containernav">
+            <div class="logom"><img src="./imgs/logo.jpg" alt="A1 Logo"></div>
+            <a href="#" class="toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class="navbar">
+                <ul>
+            <li>
+                <a href="/index.html">HOME</a>
+            </li>
+    
+            <li>
+                <a href="/post.html">PROJECTS</a>
+            </li>
+    
+            <li>
+                <a href="/about.html">ABOUT US</a>
+            </li>
+                </ul>
+            </div>
+        </nav>
+        <div>
+            <h1 class="LogoN">Anything in you mind ?</h1>
+        </div>
+        <script>
+            const toggleButton = document.getElementsByClassName('toggle')[0]
+            const navbarLinks = document.getElementsByClassName('navbar')[0]
+    
+            toggleButton.addEventListener('click', () => {
+                navbarLinks.classList.toggle('active')
+            })
+            </script>
 </body>
 </html>
