@@ -45,10 +45,15 @@ app.get('/projects/patient_manager',(req,res)=>{
     res.download(path.resolve(__dirname+'/projects/patient_manager'));
 })
 
-app.get('/test',(req,res)=>{
+app.get('/projects',(req,res)=>{
     res.statusCode=200;
-    res.sendFile(path.join(__dirname+"/test.html"))
+    res.sendFile(path.join(__dirname+'/projects.html'));
 })
+
+//app.get('/test',(req,res)=>{
+//    res.statusCode=200;
+//    res.sendFile(path.join(__dirname+"/test.html"))
+//})
 
 app.all('*',(req,res)=>{
     res.statusCode=404;
