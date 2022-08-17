@@ -1,18 +1,4 @@
 <!DOCTYPE html>
 <html>
 
-<script>
-    let d;
-    function clk(){
-        document.location=d;
-    }
-fetch('/projectlists').then((post)=>{
-    return post.json();
-}).then((data)=>{
-    let p=document.getElementById("name");
-    p.innerHTML=data.project1[0];
-    d=data.project1[2];
-})</script>
-<p id="name"></p>
-<button onclick="clk()">download</button>
 </html>

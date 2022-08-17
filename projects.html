@@ -43,5 +43,22 @@
                 navbarLinks.classList.toggle('active')
             })
             </script>
+            <script>
+                let d;
+                function clk(){
+                    document.location=d;
+                }
+            fetch('/projectlists').then((post)=>{
+                return post.json();
+            }).then((data)=>{
+                let p=document.getElementById("name");
+                p.innerHTML=data.project1[0];
+                d=data.project1[2];
+                document.getElementById("i").src='/projects'+data.project1[1];
+                
+            })</script>
+            <img id="i"></img>
+            <p id="name"></p>
+            <button onclick="clk()">download</button>
 </body>
 </html>

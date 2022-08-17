@@ -55,6 +55,11 @@ app.get('/projects',(req,res)=>{
 //    res.sendFile(path.join(__dirname+"/test.html"))
 //})
 
+app.get('/projects/logo/th-4050477786.jpg',(req,res)=>{
+    res.statusCode=200;
+    res.sendFile(path.join(__dirname+'/projects'+'/logo/th-4050477786.jpg'));
+})
+
 app.all('*',(req,res)=>{
     res.statusCode=404;
     res.sendFile(path.join(__dirname+'/404.html'));
